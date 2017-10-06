@@ -20,3 +20,6 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/addpost', 'HomeController@addpost');
+Route::get('/register', function(){
+	return redirect('/login');
+});
