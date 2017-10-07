@@ -1,0 +1,27 @@
+.social-icons a {
+  background: url(../images/social-icons.png);
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.social-icons a.facebook {
+  font-size: 30px;
+  background-position: 0px 0px;
+}
+.social-icons a.twitter {
+  font-size: 30px;
+  background-position: -30px 0px;
+}
+.social-icons a.youtube {
+  font-size: 30px;
+  background-position: -60px 0px;
+}
+.social-icons a.gplus {
+  font-size: 30px;
+  background-position: -90px 0px;
+}
+.social-icons a.linkedin {
+  font-size: 30px;
+  background-position: -120px 0px;
+}
