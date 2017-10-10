@@ -10,7 +10,7 @@ use App\Bpost;
 
 class PostController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
 
     	$latest_posts = Bpost::orderBy('id', 'desc')->take(4)->get();
 
@@ -18,6 +18,7 @@ class PostController extends Controller
     		print_r($all_posts);
     	echo "</pre>";
     	echo "Welcome to home page..";*/
-    	return view('user.index', ['latest_posts' => $latest_posts]);
+    	$active = $request->segment(1);
+    	return view('user.index', ['latest_posts' => $latest_posts, 'active' => $active]);
     }
 }

@@ -25,7 +25,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">About Me(Webchef):</div>
         <div class="panel-body">
-          Hi, this is prudhvi the Webchef from past 4+ years and cooking different web recipes using AngularJs, Laravel, Codeigniter etc.
+          Hi, this is prudhvi the Webchef, from past 3+ years i am cooking different web recipes using Codeigniter, AngularJs, Laravel as ingredients. Here i am sharing some of my recipes..! you can taste them for free..!
         </div>
       </div>
     </div>

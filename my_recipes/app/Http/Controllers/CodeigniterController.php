@@ -14,10 +14,11 @@ class CodeigniterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $posts = Bpost::where('slug', 'codeigniter')->orderBy('id', 'desc')->get();
-        return view('user.index', ['latest_posts' => $posts]);
+        $active = $request->segment(1);
+        return view('user.index', ['latest_posts' => $posts, 'active' => $active]);
     }
 
     /**
@@ -47,10 +48,13 @@ class CodeigniterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $post = Bpost::where('slug', 'codeigniter')->findorfail($id);
-        return view('user.single', ['post' => $post]);
+        $active = $request->segment(1);
+        //$active = $request->is('corephp/*');
+        //echo $active;
+        return view('user.single', ['post' => $post, 'active' => $active]);
     }
 
     /**

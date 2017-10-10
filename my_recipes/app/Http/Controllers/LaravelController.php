@@ -15,10 +15,11 @@ class LaravelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $posts = Bpost::where('slug', 'laravel')->orderBy('id', 'desc')->get();
-        return view('user.index', ['latest_posts' => $posts]);
+        $active = $request->segment(1);
+        return view('user.index', ['latest_posts' => $posts, 'active' => $active]);
         //echo "This is index";
     }
 
@@ -49,10 +50,11 @@ class LaravelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $post = Bpost::where('slug', 'laravel')->findorfail($id);
-        return view('user.single', ['post' => $post]);
+        $active = $request->segment(1);
+        return view('user.single', ['post' => $post, 'active' => $active]);
         //echo "This is for single".$id;
     }
 

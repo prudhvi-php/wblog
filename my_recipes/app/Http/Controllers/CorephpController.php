@@ -7,17 +7,18 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Bpost;
 
-class AngularjsController extends Controller
+class CorephpController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Bpost::where('slug', 'angularjs')->orderBy('id', 'desc')->get();
-        return view('user.index', ['latest_posts' => $posts]);
+        $posts = Bpost::where('slug', 'corephp')->orderBy('id', 'desc')->get();
+        $active = $request->segment(1);
+        return view('user.index', ['latest_posts' => $posts, 'active' => $active]);
     }
 
     /**
@@ -47,10 +48,11 @@ class AngularjsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        $post = Bpost::where('slug', 'angularjs')->findorfail($id);
-        return view('user.single', ['post' => $post]);
+        $post = Bpost::where('slug', 'corephp')->findorfail($id);
+        $active = $request->segment(1);
+        return view('user.single', ['post' => $post, 'active' => $active]);
     }
 
     /**

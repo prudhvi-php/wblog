@@ -57,18 +57,20 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ url('/corephp') }}">Core Php</a></li>
-        <li><a href="{{ url('/laravel') }}">Laravel</a></li>
-        <li><a href="{{ url('/codeigniter') }}">Codeigniter</a></li>
-        <li><a href="{{ url('/angularjs') }}">Angular Js</a></li>
-        <li><a href="{{ url('/jquery') }}">Jquery</a></li>
-        <li><a href="{{ url('/others') }}">Others</a></li>
+
+        <li {{{ ($active == '' ? 'class=active' : '') }}}><a href="{{ url('/') }}">Home</a></li>
+        <li {{{ ($active == 'corephp' ? 'class=active' : '') }}}><a href="{{ url('/corephp') }}">Core Php</a></li>
+        <li {{{ ($active == 'laravel' ? 'class=active' : '') }}}><a href="{{ url('/laravel') }}">Laravel</a></li>
+        <li {{{ ($active == 'codeigniter' ? 'class=active' : '') }}}><a href="{{ url('/codeigniter') }}">Codeigniter</a></li>
+        <li {{{ ($active == 'angularjs' ? 'class=active' : '') }}}><a href="{{ url('/angularjs') }}">Angular Js</a></li>
+        <li {{{ ($active == 'jquery' ? 'class=active' : '') }}}><a href="{{ url('/jquery') }}">Jquery</a></li>
+        <li {{{ ($active == 'others' ? 'class=active' : '') }}}><a href="{{ url('/others') }}">Others</a></li>
+        <li {{{ ($active == 'photography' ? 'class=active' : '') }}}><a href="{{ url('/photography') }}">Photography</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
+
   @yield('content');
 
 <footer class="container-fluid text-center footer" style="padding: 20px;">
