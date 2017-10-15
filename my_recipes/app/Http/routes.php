@@ -23,6 +23,8 @@ Route::resource('codeigniter', 'CodeigniterController', ['only' => ['index', 'sh
 Route::resource('angularjs', 'AngularjsController', ['only' => ['index', 'show']]);
 Route::resource('jquery', 'JqueryController', ['only' => ['index', 'show']]);
 Route::resource('others', 'OtherController', ['only' => ['index', 'show']]);
+Route::resource('photography', 'PhotoController', ['only' => ['index', 'show']]);
+
 
 Route::auth();
 
@@ -30,8 +32,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/allposts', 'HomeController@allposts');
 
 Route::get('/addpost', 'HomeController@addpost');
-
 Route::post('/addpost', 'HomeController@newpost');
+
+Route::get('/addphoto', 'HomeController@addphoto');
+Route::post('/addphoto', 'HomeController@newphoto');
 
 Route::get('/register', function(){
 	return redirect('/webchef');
