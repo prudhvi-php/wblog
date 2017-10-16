@@ -84,10 +84,8 @@
     </div>
     <div class="col-sm-4">
       <h4 class="footer-head">Technologies</h4>
-        <p>How It Works</p>
-        <p>Faq</p>
-        <p>Feedback</p>
-        <p>Contact</p>
+        <p>Laravel</p>
+        <p>Angularjs</p>
     </div>
     <div class="col-sm-4">
       <h4 class="footer-head">Follow Me</h4>

@@ -1,7 +1,12 @@
 @extends('layouts.user')
 
 @section('title')
-	<title>{{$post->title}}</title>
+	<title>This post belongs to {{$active}}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@webnsyntax" />
+    <meta name="twitter:title" content="webnsyntax" />
+    <meta name="twitter:description" content="{{$post->title}}" />
+    <meta name="keywords" content="{{$post->tags}}"/>
 @endsection
 
 @section('content')

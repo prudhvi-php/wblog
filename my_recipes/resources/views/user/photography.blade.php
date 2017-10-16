@@ -1,7 +1,11 @@
 @extends('layouts.user')
 
 @section('title')
-	<title>My Photography..</title>
+	<title>My Photography</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@webnsyntax" />
+    <meta name="twitter:title" content="webnsyntax" />
+    <meta name="twitter:description" content="This page contains all photos that i had taken originally." />
 @endsection
 
 @section('content')

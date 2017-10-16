@@ -75,6 +75,10 @@ class HomeController extends Controller
             $bpost->image = 'php.jpg';
             $bpost->slug = 'corephp';
         }
+        elseif ($request->category == "Jquery") {
+            $bpost->image = 'jquery.jpg';
+            $bpost->slug = 'jquery';
+        }
         elseif ($request->category == "Others") {
             $bpost->image = 'others.jpg';
             $bpost->slug = 'others';

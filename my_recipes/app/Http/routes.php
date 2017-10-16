@@ -37,6 +37,6 @@ Route::post('/addpost', 'HomeController@newpost');
 Route::get('/addphoto', 'HomeController@addphoto');
 Route::post('/addphoto', 'HomeController@newphoto');
 
-Route::get('/register', function(){
+/*Route::get('/register', function(){
 	return redirect('/webchef');
-});
+});*/

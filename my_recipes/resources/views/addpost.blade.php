@@ -37,6 +37,7 @@
                                 <option>Codeigniter</option>
                                 <option>Laravel</option>
                                 <option>AngularJs</option>
+                                <option>Jquery</option>
                                 <option>Others</option>
                               </select>
                             </div>

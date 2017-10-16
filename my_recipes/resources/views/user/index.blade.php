@@ -1,7 +1,17 @@
 @extends('layouts.user')
 
 @section('title')
-	<title>Home page for user..</title>
+	<title>All {{$active}} posts</title>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@webnsyntax" />
+  <meta name="twitter:title" content="webnsyntax" />
+    @if($active == "")
+      <meta name="twitter:description" content="This link contains all the posts belongs to php, javascript, angularjs, laravel" />
+    @else
+      <meta name="twitter:description" content="This link contains all the posts belongs to {{$active}}" />
+    @endif
+  
+  <meta name="twitter:image" content="image of the page to be added to tweet" />
 @endsection
 
 @section('content')
