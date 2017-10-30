@@ -29,7 +29,7 @@
           	<div class="col-sm-12">
           		<div class="panel panel-default">
 				  <div class="panel-body">
-				  	<img src="{{asset('my_recipes/storage/photographs/').'/'.$photograph->path}}" class="img-responsive" width="100%" height="100%"><br/><br>
+				  	<img src="{{asset('my_recipes/storage/photographs').'/'.$photograph->path}}" class="img-responsive" width="100%" height="100%"><br/><br>
 				  	<p>{{$photograph->description}}</p>
 				  	<p>Tags: {{$photograph->tags}}</p>
 				  </div>
