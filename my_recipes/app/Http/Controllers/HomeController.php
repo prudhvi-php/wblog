@@ -56,7 +56,7 @@ class HomeController extends Controller
 
         $bpost->title = $request->title;
         $bpost->category = $request->category;
-        $bpost->description = $request->description;
+        $bpost->description = $request->description1;
         $bpost->tags = $request->tags;
 
         if($request->category == "Laravel"){
